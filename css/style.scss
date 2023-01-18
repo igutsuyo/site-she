@@ -1,0 +1,171 @@
+/* reset css */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* style */
+
+:root {
+  font-family: 'Noto Serif JP', serif;
+	font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+	font-size: 2.488rem;
+}
+h2 {
+	font-size: 2.074rem;
+}
+h3 {
+	font-size: 1.728rem;
+}
+h4 {
+	font-size: 1.44rem;
+}
+h5 {
+	font-size: 1.2rem;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1070px;
+}
+
+
+.button {
+  appearance: none;
+	font-family: 'Noto Serif JP', serif;
+	letter-spacing: 0.1em;
+  border: 0;
+  padding: 20px 40px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	height: 70px;
+	display: flex;
+	justify-content: flex-end;
+	z-index: 100;
+	& .shop-button::before {
+		content: "";
+		display: inline-block;
+		background-image: url(/img/shop-icon.png);
+		background-size: contain;
+		width: 13px;
+		height: 13px;
+		margin-right: .3em;
+	}
+	& .shop-button::after {
+		content: "";
+		display: inline-block;
+		background-image: url(/img/arrow.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 12px;
+		height: 12px;
+		margin-left: .4em;
+	}
+}
+
+.hero {
+	position: relative;
+	width: 100%;
+	height: 90vh;
+	margin-top: -70px;
+	background-image: url(/img/top-image.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	& .hero-text {
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translate( -50%, -50%);
+	}
+
+
+	& .hero-image {
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 600px;
+	}
+}
+
+/* menu */
+
+.menu {
+	background-color: #585858;
+}
+.menu-items {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: row;
+	height: 80px;
+	margin: 0 40px;
+	& a {
+		display: inline-block;
+		color: #fff;
+		text-decoration: none;
+		letter-spacing: 0.1em;
+	}
+}
